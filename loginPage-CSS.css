@@ -1,0 +1,99 @@
+body{
+    background-image: url("background-cars.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#titlu-proiect{
+    color:white;
+    text-align: end;
+}
+
+.login-register{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 35%;
+    margin:auto;
+    
+}
+
+
+.form-login  , .form-register {
+    display:flex;
+    flex-direction: column;
+    padding:15%;
+}
+
+.form-login button,.form-register button{
+    
+    margin-top:15px;
+    margin-bottom: 10px;
+    border-radius: 11px;
+    text-align: center;
+    align-self: center;
+    background-color:#000028;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid darkcyan;
+    color:white;
+    text-transform: uppercase;
+    outline: 0;
+    width: 60%;
+    padding:10px;
+    font-size:1.75vw;
+    cursor: pointer;
+    transition:all 0.2s
+    
+}
+.form-login button:hover , .form-register button:hover{
+    background-image: linear-gradient(darkblue,blue,cyan,blue,darkblue);
+    color:black;
+}
+
+
+.form-login div , .form-register div{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:15px;
+    color:white;
+    font-size:200%;
+    
+}
+
+.form-login input , .form-register input{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 32px;
+    border-color: teal;
+    background: rgb(0, 0, 0);
+    outline: none;
+    color:white;
+}
+.form-login input::placeholder , .form-register input::placeholder
+{
+    color:white;
+    font-size: 125%;
+}
+
+
+.form-register{
+    display:none;
+}
+
+#switch-link , #text-switch{
+    text-align: center;
+    color:rgb(41, 182, 22);
+    font-size: 100%;
+    margin-left: 20%;
+    margin-right:20%;
+}
+
+#switch-link:hover{
+    color:white;
+}
+
+@media only screen and (min-width: 480px){
+    body{
+        background-size:auto ;
+    }
+}

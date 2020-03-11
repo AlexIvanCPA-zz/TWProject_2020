@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TraST</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="loginPage-CSS.css">
+    </head>
+    <body>
+       <header>
+           <h1 id="titlu-proiect">Traffic Signs Tutor</h1>
+       </header>
+      <section class="login-register">
+            <form action="login.php" method="POST" class="form-login" id="form-login">  
+                
+                <div>
+                    <label for="registeredEmail">Email</label>
+                    <input type="text"  name="email" id="registeredEmail" placeholder="Email...">
+                </div> 
+
+                <div>     
+                    <label for="registeredPassword">Password</label>
+                    <input type="password" required name="pass" id="registeredPassword" placeholder="Password...">
+                </div>
+
+                <button type="submit">Login</button>
+                
+                <p id="text-switch"> Daca nu ai cont,</p>
+                <a id="switch-link" onclick="hideLogin()" href="#">Switch to Register</a>
+                
+            </form>
+
+            <form class="form-register" action="register.php" method="POST" id="form-register">
+               
+                <div>
+                    <label for="registeredEmail">Email</label>
+                    <input type="text"  name="email" id="registeredEmail" placeholder="Email...">
+                </div>
+
+                <div>
+                    <label for="registeredUsername">Username</label>
+                    <input type="text"  name="username" id="registeredUsername" placeholder="Username...">
+                </div>
+                
+                <div>
+                    <label for="registeredPassword">Password</label>
+                    <input type="password" required name="pass" id="registeredPassword" placeholder="Password...">
+                </div>
+
+                <div>
+                    <label for="registeredPassword">Confirm Password</label>
+                    <input type="password" required name="pass" id="registeredPassword" placeholder="Confirm Password...">
+                </div>
+
+                <button type="submit">Register</button>
+
+                <p id="text-switch"> Daca ai deja cont,</p>
+                <a id="switch-link" onclick="hideRegister()" href="#">Switch to Login</a>
+
+            </form>
+          
+       </section> 
+       <script>
+            function hideLogin() {
+       
+                var x=document.getElementById("form-login"); 
+                   var y=document.getElementById("form-register"); 
+                   if(y.style.display == "" || y.style.display == "none" ){
+                    x.style.display = "none";
+                    y.style.display= "flex";
+                    
+                   }
+               }
+               function hideRegister(){
+                var x=document.getElementById("form-login");
+                   var y=document.getElementById("form-register");
+                   if(x.style.display == "none" || x.style.display == "" ){
+                       x.style.display = "flex";
+                       y.style.display= "none";
+                   }
+            
+            
+               }
+             </script>
+    </body>
+</html>
